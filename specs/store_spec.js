@@ -1,5 +1,5 @@
 var assert = require("assert");
-var assert = require("../store.js")
+var Store = require("../store.js")
 var Record = require("../record.js");
 
 describe("Store", function(){

@@ -25,6 +25,6 @@ describe("Record", function(){
 	});
 
 	xit("should print out the record's properties as a string", function(){
-		assert.strictEqual(record.details, "American Dream by LCD Soundsystem, genre: electro-disco-rock, price: £8")
-	})
+		assert.strictEqual(record.details, "American Dream by LCD Soundsystem, genre: electro-disco-rock, price: £8");
+	});
 });
