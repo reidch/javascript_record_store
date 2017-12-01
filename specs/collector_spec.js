@@ -25,10 +25,16 @@ describe("Collector", function(){
 	});
 
 	xit("should be able to buy records", function(){
+		collector.buyRecords();
 		assert.strictEqual(collector.collection.length, 3);
 	});
 
+	xit("should have cash", function(){
+		assert.strictEqual(collector.cash, 50);
+	});
+
 	xit("should have cash that decreases with buying", function(){
+		collector.buyRecords(); 
 		assert.strictEqual(collector.cash, 24);
 	});
 
