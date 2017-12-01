@@ -8,19 +8,23 @@ describe("Record", function(){
 		record = new Record("American Dream", "LCD Soundsystem", "electro-disco-rock", 8);
 	});
 
-	it("should have a title", function(){
+	xit("should have a title", function(){
 		assert.strictEqual(record.title, "American Dream");
 	});
 
-	it("should have an artist", function(){
+	xit("should have an artist", function(){
 		assert.strictEqual(record.artist, "LCD Soundsystem");
 	});
 
-	it("should have a genre", function(){
+	xit("should have a genre", function(){
 		assert.strictEqual(record.genre, "electro-disco-rock");
 	});
 
-	it("should have a price", function(){
+	xit("should have a price", function(){
 		assert.strictEqual(record.price, 9);
 	});
+
+	xit("should print out the record's properties as a string", function(){
+		assert.strictEqual(record.details, "American Dream by LCD Soundsystem, genre: electro-disco-rock, price: £8")
+	})
 });
