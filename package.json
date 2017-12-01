@@ -1,0 +1,22 @@
+{
+  "name": "record_store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reidch/javascript_record_store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reidch/javascript_record_store/issues"
+  },
+  "homepage": "https://github.com/reidch/javascript_record_store#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
