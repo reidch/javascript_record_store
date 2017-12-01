@@ -18,5 +18,8 @@
   "homepage": "https://github.com/reidch/javascript_record_store#readme",
   "devDependencies": {
     "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
