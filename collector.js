@@ -11,10 +11,6 @@ Collector.prototype = {
 		this.collection.push(record);
 	},
 
-	getTotalValue: function(){
-			return _.sumBy(this.collection, "price");
-	},
-
 	getTotalValue: function(genre){
 		if(genre){
 			var collection = _.filter(this.collection, {genre: genre});
