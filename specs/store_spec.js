@@ -22,16 +22,16 @@ describe("Store", function(){
 	});
 
 		var addRecords = function(){
-			// store.addRecord(record1);
-			// store.addRecord(record2);
-			// store.addRecord(record3);
-			// store.addRecord(record4);
-			// store.addRecord(record5);
-			// store.addRecord(record6);
-			// store.addRecord(record7);
-			// store.addRecord(record8);
-			// store.addRecord(record9);
-			// store.addRecord(record10);
+			store.addRecord(record1);
+			store.addRecord(record2);
+			store.addRecord(record3);
+			store.addRecord(record4);
+			store.addRecord(record5);
+			store.addRecord(record6);
+			store.addRecord(record7);
+			store.addRecord(record8);
+			store.addRecord(record9);
+			store.addRecord(record10);
 		};
 
 	it("should have a name", function(){
@@ -50,8 +50,8 @@ describe("Store", function(){
 		assert.strictEqual(store.balance, 1000);
 	});
 
-	xit("should be able to add records to the inventory", function(){
-		assert.strictEqual(store.records.length, 10);
+	it("should be able to add records to the inventory", function(){
+		assert.strictEqual(store.inventory.length, 10);
 	});
 
 	xit("should be able to list the inventory", function(){
