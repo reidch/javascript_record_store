@@ -63,13 +63,14 @@ describe("Store", function(){
 		assert.strictEqual(store.balance, 1008);
 	});
 
+// doesn't work yet
 	xit("should be able to report financial situation", function(){
-		assert.strictEqual(store.financial, 1084);
+		var financialSituation = store.getFinancialSituation();
+		assert.deepStrictEqual(financialSituation, 1084);
 	});
 
-// only tested for 1 record; need to test for more than 1
 	it("should be able to view all records of a given genre", function(){
-		var genreList = store.findRecordsByGenre("brazilian");
-		assert.deepStrictEqual(genreList, record9);
+		var genreList = store.findRecordsByGenre("alternative");
+		assert.deepStrictEqual(genreList, record2, record7);
 	});
 });

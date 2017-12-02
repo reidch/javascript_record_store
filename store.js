@@ -12,9 +12,15 @@ Store.prototype = {
 		this.inventory.push(record);
 	},
 
-	findRecordsByGenre: function(genre) {
-			return _.find(this.inventory, {genre: genre});
-		},
+	findRecordsByGenre: function(genre){
+		return _.find(this.inventory, {genre: genre});
+	},
+
+// doesn't work yet
+	// getFinancialSituation: function(){
+	// 	var assets = _.filter(this.inventory, {price: price});
+	// 	return _.sumBy(assets, "price") += this.balance;
+	// }
 };
 
 module.exports = Store;

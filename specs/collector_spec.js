@@ -33,8 +33,8 @@ describe("Collector", function(){
 	});
 
 	xit("should have cash that decreases with buying", function(){
-		collector.buyRecords();
-		assert.strictEqual(collector.cash, 24);
+		collector.buyRecord(record6);
+		assert.strictEqual(collector.cash, 40);
 	});
 
 	xit("should be able to sell records", function(){
@@ -42,6 +42,7 @@ describe("Collector", function(){
 		assert.strictEqual(collector.collection.length, 2);
 	});
 
+// not working yet; maybe have to add sellRecord up top?
 	xit("should have cash that increases with selling", function(){
 		collector.sellRecord(record6);
 		assert.strictEqual(collector.cash, 60);

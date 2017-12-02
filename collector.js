@@ -11,6 +11,14 @@ Collector.prototype = {
 		this.collection.push(record);
 	},
 
+	// sellRecord: function(price){
+	// 	this.cash += price;
+	// },
+  //
+	// buyRecord: function(price){
+	// 	this.cash -= price;
+	// },
+
 	getTotalValue: function(genre){
 		if(genre){
 			var collection = _.filter(this.collection, {genre: genre});
