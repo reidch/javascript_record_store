@@ -54,12 +54,12 @@ describe("Collector", function(){
 		assert.strictEqual(collector.collection.length, 3);
 	});
 
-	xit("should be able to view total value", function(){
-		assert.strictEqual(collector.collection.price, 26);
-    // has to access the price of each record in collection
+	it("should be able to view total value", function(){
+		var totalValue = collector.getTotalValue();
+		assert.strictEqual(totalValue, 26);
 	});
 
-	xit("should be able to view all records of a given genre", function(){
+	xit("should be able to view the value of all records of a given genre", function(){
 		var classicalList = collector.listCollection("classical");
 		assert.strictEqual(classicalList, [collection.classical]);
 	});

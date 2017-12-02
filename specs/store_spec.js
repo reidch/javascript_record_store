@@ -67,6 +67,7 @@ describe("Store", function(){
 		assert.strictEqual(store.financial, 1084);
 	});
 
+// only tested for 1 record; need to test for more than 1
 	it("should be able to view all records of a given genre", function(){
 		var genreList = store.findRecordsByGenre("brazilian");
 		assert.deepStrictEqual(genreList, record9);
