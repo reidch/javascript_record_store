@@ -7,6 +7,7 @@ describe("Collector", function(){
 
 	beforeEach(function(){
 		collector = new Collector("Graham Banks", 50);
+		record5 = new Record("Eulogy for Evolution", "Olafur Arnalds", "classical", 7);
 		record6 = new Record("Solo Piano", "Philip Glass", "classical", 10);
 		record7 = new Record("OK Computer", "Radiohead", "alternative", 8);
 		record8 = new Record("Debut", "Bjork", "electronic", 8);
@@ -15,6 +16,7 @@ describe("Collector", function(){
 	});
 
 	var buyRecords = function(){
+		collector.buyRecord(record5);
 		collector.buyRecord(record6);
 		collector.buyRecord(record7);
 		collector.buyRecord(record8);
@@ -25,7 +27,7 @@ describe("Collector", function(){
 	});
 
 	it("should be able to buy records", function(){
-		assert.strictEqual(collector.collection.length, 3);
+		assert.strictEqual(collector.collection.length, 4);
 	});
 
 	it("should have cash", function(){
@@ -39,7 +41,7 @@ describe("Collector", function(){
 
 	xit("should be able to sell records", function(){
 		collector.sellRecord(record6);
-		assert.strictEqual(collector.collection.length, 2);
+		assert.strictEqual(collector.collection.length, 3);
 	});
 
 // not working yet; maybe have to add sellRecord up top?
@@ -57,13 +59,12 @@ describe("Collector", function(){
 
 	it("should be able to view total value", function(){
 		var totalValue = collector.getTotalValue();
-		assert.strictEqual(totalValue, 26);
+		assert.strictEqual(totalValue, 33);
 	});
 
-// only tested for 1 record; need to test for more than 1
 	it("should be able to view the value of all records of a given genre", function(){
-		var genreValue = collector.getTotalValue("electronic");
-		assert.strictEqual(genreValue, 8);
+		var genreValue = collector.getTotalValue("classical");
+		assert.strictEqual(genreValue, 17);
 	});
 
 	it("should be able to view most valuable record", function(){
