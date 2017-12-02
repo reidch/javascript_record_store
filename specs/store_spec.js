@@ -6,7 +6,7 @@ describe("Store", function(){
 	var store, record1, record2, record3, record4, record5, record6, record6, record7, record8, record9, record10;
 
 	beforeEach(function(){
-		store = new Store("Fopp", "Glasgow", "inventory", 1000);
+		store = new Store("Fopp", "Glasgow", 1000);
 		record1 = new Record("American Dream", "LCD Soundsystem", "electro-disco-rock", 8);
 		record2 = new Record("Utopia", "Bjork", "alternative", 10);
 		record3 = new Record("This Is Happening", "LCD Soundsystem", "electro-disco-rock", 9);
@@ -22,31 +22,31 @@ describe("Store", function(){
 	});
 
 		var addRecords = function(){
-			store.addRecord(record1);
-			store.addRecord(record2);
-			store.addRecord(record3);
-			store.addRecord(record4);
-			store.addRecord(record5);
-			store.addRecord(record6);
-			store.addRecord(record7);
-			store.addRecord(record8);
-			store.addRecord(record9);
-			store.addRecord(record10);
+			// store.addRecord(record1);
+			// store.addRecord(record2);
+			// store.addRecord(record3);
+			// store.addRecord(record4);
+			// store.addRecord(record5);
+			// store.addRecord(record6);
+			// store.addRecord(record7);
+			// store.addRecord(record8);
+			// store.addRecord(record9);
+			// store.addRecord(record10);
 		};
 
-	xit("should have a name", function(){
+	it("should have a name", function(){
 		assert.strictEqual(store.name, "Fopp");
 	});
 
-	xit("should have a location", function(){
-		assert.strictEqual(store.city, "Glasgow");
+	it("should have a location", function(){
+		assert.strictEqual(store.location, "Glasgow");
 	});
 
 	xit("should have an inventory", function(){
 		assert.strictEqual(store.inventory, [inventory]);
 	});
 
-	xit("should have a balance", function(){
+	it("should have a balance", function(){
 		assert.strictEqual(store.balance, 1000);
 	});
 
