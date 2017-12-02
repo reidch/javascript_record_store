@@ -7,7 +7,9 @@ var Collector = function(name, cash){
 };
 
 Collector.prototype = {
-
+	buyRecord: function(record){
+		this.collection.push(record);
+	}
 };
 
 module.exports = Collector;

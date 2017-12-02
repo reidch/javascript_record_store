@@ -15,17 +15,16 @@ describe("Collector", function(){
 	});
 
 	var buyRecords = function(){
-		// collector.buyRecord(record6);
-		// collector.buyRecord(record7);
-		// collector.buyRecord(record8);
+		collector.buyRecord(record6);
+		collector.buyRecord(record7);
+		collector.buyRecord(record8);
 	}
 
 	it("should have a name", function(){
 		assert.strictEqual(collector.name, "Graham Banks");
 	});
 
-	xit("should be able to buy records", function(){
-		collector.buyRecords();
+	it("should be able to buy records", function(){
 		assert.strictEqual(collector.collection.length, 3);
 	});
 
