@@ -59,9 +59,10 @@ describe("Collector", function(){
 		assert.strictEqual(totalValue, 26);
 	});
 
-	xit("should be able to view the value of all records of a given genre", function(){
-		var classicalList = collector.listCollection("classical");
-		assert.strictEqual(classicalList, [collection.classical]);
+// only tested for 1 record; need to test for more than 1
+	it("should be able to view the value of all records of a given genre", function(){
+		var genreValue = collector.getTotalValue("electronic");
+		assert.strictEqual(genreValue, 8);
 	});
 
 	it("should be able to view most valuable record", function(){

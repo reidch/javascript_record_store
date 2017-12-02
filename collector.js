@@ -12,21 +12,17 @@ Collector.prototype = {
 	},
 
 	getTotalValue: function(){
-		// if(type){
-		// 	var accounts = _.filter(this.accounts, {type: type});
-		// 	return _.sumBy(accounts, 'balance');
-		// }else{
 			return _.sumBy(this.collection, "price");
 	},
 
-	// getTotalValue: function(type){
-	// 	if(type){
-	// 		var accounts = _.filter(this.accounts, {type: type});
-	// 		return _.sumBy(accounts, 'balance');
-	// 	}else{
-	// 		return _.sumBy(this.accounts, 'balance');
-	// 	}
-	// },
+	getTotalValue: function(genre){
+		if(genre){
+			var collection = _.filter(this.collection, {genre: genre});
+			return _.sumBy(collection, "price");
+		}else{
+			return _.sumBy(this.collection, "price");
+		}
+	},
 
 	findMostValuableRecord: function(){
 		return _.maxBy(this.collection, "price");
