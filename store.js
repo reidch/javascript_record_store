@@ -20,11 +20,10 @@ Store.prototype = {
 	// 	return this.inventory;
 	// }
 
-// doesn't work yet
-	// getFinancialSituation: function(){
-	// 	var assets = _.filter(this.inventory, {price: price});
-	// 	return _.sumBy(assets, "price") += this.balance;
-	// }
+	getFinancialSituation: function(){
+		var capital = _.sumBy(this.inventory, "price");
+		return capital += this.balance;
+	}
 };
 
 module.exports = Store;

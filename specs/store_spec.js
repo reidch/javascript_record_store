@@ -66,10 +66,8 @@ describe("Store", function(){
 		assert.strictEqual(store.balance, 1008);
 	});
 
-// doesn't work yet
-	xit("should be able to report financial situation", function(){
-		var financialSituation = store.getFinancialSituation();
-		assert.deepStrictEqual(financialSituation, 1084);
+	it("should be able to report financial situation", function(){
+		assert.deepStrictEqual(store.getFinancialSituation(), 1084);
 	});
 
 	it("should be able to view all records of a given genre", function(){
