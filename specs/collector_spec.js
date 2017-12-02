@@ -13,6 +13,7 @@ describe("Collector", function(){
 		record8 = new Record("Debut", "Bjork", "electronic", 8);
 
 		buyRecords();
+
 	});
 
 	var buyRecords = function(){

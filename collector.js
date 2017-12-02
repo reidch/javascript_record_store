@@ -11,6 +11,10 @@ Collector.prototype = {
 		this.collection.push(record);
 	},
 
+	// sellRecord: function(record){
+	// 	this.collection.splice(record);
+	// },
+
 	// sellRecord: function(price){
 	// 	this.cash += price;
 	// },

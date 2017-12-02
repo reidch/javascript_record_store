@@ -8,9 +8,9 @@ var Record = function(title, artist, genre, price){
 };
 
 Record.prototype = {
-
-
-
+	printDetails: function(){
+		return this.title + " by " + this.artist + ", genre: " + this.genre + ", price: £" + this.price;
+	}
 };
 
 module.exports = Record;
