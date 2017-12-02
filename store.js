@@ -16,6 +16,10 @@ Store.prototype = {
 		return _.find(this.inventory, {genre: genre});
 	},
 
+	// listInventory: function(){
+	// 	return this.inventory;
+	// }
+
 // doesn't work yet
 	// getFinancialSituation: function(){
 	// 	var assets = _.filter(this.inventory, {price: price});

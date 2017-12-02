@@ -35,11 +35,13 @@ describe("Collector", function(){
 		assert.strictEqual(collector.cash, 50);
 	});
 
+// doesn't work yet
 	xit("should have cash that decreases with buying", function(){
 		collector.buyRecord(record6);
 		assert.strictEqual(collector.cash, 40);
 	});
 
+// doesn't work yet
 	xit("should be able to sell records", function(){
 		collector.sellRecord(record6);
 		assert.strictEqual(collector.collection.length, 3);
@@ -51,6 +53,7 @@ describe("Collector", function(){
 		assert.strictEqual(collector.cash, 60);
 	});
 
+// doesn't work yet
 	xit("shouldn't be able to buy if funds insufficient", function(){
 		collector.cash = 5;
 		collector.buyRecord(record8);
@@ -73,11 +76,13 @@ describe("Collector", function(){
 		assert.deepStrictEqual(mostValuable, record6);
 	});
 
+// doesn't work yet
 	xit("should be able to sort records by value, ascending order", function(){
 		assert.strictEqual(collector.collection.price, [record7, record8, record6]);
 		// has to access the price of each record in collection
 	});
 
+// doesn't work yet
 	xit("should be able to compare value of collection with another collector", function(){
 		assert.strictEqual(collector.collection.price, [record7, record8, record6]);
 		// has to access the price of each record in collection
