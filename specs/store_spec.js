@@ -42,8 +42,8 @@ describe("Store", function(){
 		assert.strictEqual(store.location, "Glasgow");
 	});
 
-	xit("should have an inventory", function(){
-		assert.strictEqual(store.inventory, [inventory]);
+	it("should have an inventory", function(){
+		assert.strictEqual(store.inventory, store.inventory);
 	});
 
 	it("should have a balance", function(){
