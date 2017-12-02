@@ -15,12 +15,12 @@ describe("Collector", function(){
 	});
 
 	var buyRecords = function(){
-		collector.buyRecord(record6);
-		collector.buyRecord(record7);
-		collector.buyRecord(record8);
+		// collector.buyRecord(record6);
+		// collector.buyRecord(record7);
+		// collector.buyRecord(record8);
 	}
 
-	xit("should have a name", function(){
+	it("should have a name", function(){
 		assert.strictEqual(collector.name, "Graham Banks");
 	});
 
@@ -29,12 +29,12 @@ describe("Collector", function(){
 		assert.strictEqual(collector.collection.length, 3);
 	});
 
-	xit("should have cash", function(){
+	it("should have cash", function(){
 		assert.strictEqual(collector.cash, 50);
 	});
 
 	xit("should have cash that decreases with buying", function(){
-		collector.buyRecords(); 
+		collector.buyRecords();
 		assert.strictEqual(collector.cash, 24);
 	});
 
