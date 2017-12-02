@@ -64,9 +64,9 @@ describe("Collector", function(){
 		assert.strictEqual(classicalList, [collection.classical]);
 	});
 
-	xit("should be able to view most valuable record", function(){
-		assert.strictEqual(collector.collection.price, 10);
-		// has to access the price of each record in collection
+	it("should be able to view most valuable record", function(){
+		var mostValuable = collector.findMostValuableRecord();
+		assert.strictEqual(mostValuable, record6);
 	});
 
 	xit("should be able to sort records by value, ascending order", function(){

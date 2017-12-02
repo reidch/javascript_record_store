@@ -9,7 +9,11 @@ var Collector = function(name, cash){
 Collector.prototype = {
 	buyRecord: function(record){
 		this.collection.push(record);
-	}
+	},
+
+	findMostValuableRecord: function(){
+		return _.maxBy(this.collection, "price");
+	},
 };
 
 module.exports = Collector;
