@@ -10,7 +10,11 @@ var Store = function(name, location, balance){
 Store.prototype = {
 	addRecord: function(record){
 		this.inventory.push(record);
-	}
+	},
+
+	findRecordsByGenre: function(genre) {
+			return _.find(this.inventory, {genre: genre});
+		},
 };
 
 module.exports = Store;

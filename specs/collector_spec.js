@@ -66,7 +66,7 @@ describe("Collector", function(){
 
 	it("should be able to view most valuable record", function(){
 		var mostValuable = collector.findMostValuableRecord();
-		assert.strictEqual(mostValuable, record6);
+		assert.deepStrictEqual(mostValuable, record6);
 	});
 
 	xit("should be able to sort records by value, ascending order", function(){
