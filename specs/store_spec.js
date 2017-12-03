@@ -54,9 +54,9 @@ describe("Store", function(){
 		assert.strictEqual(store.inventory.length, 10);
 	});
 
-// doesn't work yet
+// can't get this to work
 	xit("should be able to list the inventory", function(){
-		assert.strictEqual(store.listInventory, {record1, record2, record3, record4, record5, record6, record6, record7, record8, record9, record10});
+		assert.strictEqual(store.listInventory, [record1, record2, record3, record4, record5, record6, record6, record7, record8, record9, record10]);
 	});
 
 	it("should be able to sell a record and adjust the balance accordingly", function(){
