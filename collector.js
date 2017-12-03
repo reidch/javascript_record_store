@@ -8,20 +8,13 @@ var Collector = function(name, cash){
 
 Collector.prototype = {
 	buyRecord: function(record){
-		// if(this.cash >= record.price){
-		this.collection.push(record)
-		this.cash -= record.price;
-	// }
-	// return "Insufficient funds"
-},
+		if(this.cash >= record.price){
+			this.collection.push(record);
+			this.cash -= record.price;
+		}
+		return "Insufficient funds. Pick something cheaper.";
+	},
 
-	// buy: function(record){
-  //   if(this.cash > record.price){
-  //     this.records.push(record)
-  //     this.cash -= record.price
-  //   }
-  //   return "You can't afford this!"
-  // },
   sellRecord: function(record){
     this.cash += record.price;
     return _.remove(this.collection, record);

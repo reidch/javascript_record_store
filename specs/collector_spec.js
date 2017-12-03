@@ -59,12 +59,11 @@ describe("Collector", function(){
 		assert.strictEqual(collector.cash, 60);
 	});
 
-// doesn't work yet
-	xit("shouldn't be able to buy if funds insufficient", function(){
+	it("shouldn't be able to buy if funds insufficient", function(){
 		collector.cash = 5;
 		collector.buyRecord(record8);
-    // check the length doesn't increase if insufficient funds
-		assert.strictEqual(collector.collection.length, 4);
+// checking the size of the array doesn't increase if insufficient funds
+		assert.strictEqual(collector.collection.length, 0);
 	});
 
 	it("should be able to view total value", function(){
