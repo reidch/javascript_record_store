@@ -12,6 +12,11 @@ Store.prototype = {
 		this.inventory.push(record);
 	},
 
+	sellRecord: function(record){
+    this.balance += record.price
+    return _.remove(this.inventory, record)
+  },
+
 	getFinancialSituation: function(){
 		var capital = _.sumBy(this.inventory, "price");
 		return capital += this.balance;
