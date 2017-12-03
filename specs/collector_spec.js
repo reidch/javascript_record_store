@@ -46,8 +46,7 @@ describe("Collector", function(){
 		assert.strictEqual(collector.collection.length, 3);
 	});
 
-// not working yet; maybe have to add sellRecord up top?
-	xit("should have cash that increases with selling", function(){
+	it("should have cash that increases with selling", function(){
 		collector.sellRecord(record6);
 		assert.strictEqual(collector.cash, 60);
 	});

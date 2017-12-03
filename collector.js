@@ -19,7 +19,7 @@ Collector.prototype = {
   //   return "You can't afford this!"
   // },
   sellRecord: function(record){
-    // this.cash += record.price
+    this.cash += record.price
     return _.remove(this.collection, record)
   },
 
