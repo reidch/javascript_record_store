@@ -56,7 +56,6 @@ describe("Store", function(){
 
 // doesn't work yet
 	xit("should be able to list the inventory", function(){
-		var inventory = store.listInventory();
 		assert.strictEqual(store.listInventory, {record1, record2, record3, record4, record5, record6, record6, record7, record8, record9, record10});
 	});
 

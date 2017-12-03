@@ -37,12 +37,11 @@ describe("Collector", function(){
 
 // doesn't work yet
 	xit("should have cash that decreases with buying", function(){
-		collector.buyRecord(record6);
-		assert.strictEqual(collector.cash, 40);
+		collector.buyRecord(record5);
+		assert.strictEqual(collector.cash, 43);
 	});
 
-// doesn't work yet
-	xit("should be able to sell records", function(){
+	it("should be able to sell records", function(){
 		collector.sellRecord(record6);
 		assert.strictEqual(collector.collection.length, 3);
 	});
