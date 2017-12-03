@@ -13,8 +13,8 @@ Store.prototype = {
 	},
 
 	sellRecord: function(record){
-    this.balance += record.price
-    return _.remove(this.inventory, record)
+    this.balance += record.price;
+    return _.remove(this.inventory, record);
   },
 
 	getFinancialSituation: function(){

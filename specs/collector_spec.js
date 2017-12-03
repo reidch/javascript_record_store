@@ -17,10 +17,10 @@ describe("Collector", function(){
 	});
 
 	var buyRecords = function(){
-		collector.buyRecord(record5);
-		collector.buyRecord(record6);
-		collector.buyRecord(record7);
-		collector.buyRecord(record8);
+		// collector.buyRecord(record5);
+		// collector.buyRecord(record6);
+		// collector.buyRecord(record7);
+		// collector.buyRecord(record8);
 	}
 
 	it("should have a name", function(){
@@ -28,6 +28,10 @@ describe("Collector", function(){
 	});
 
 	it("should be able to buy records", function(){
+		collector.buyRecord(record5);
+		collector.buyRecord(record6);
+		collector.buyRecord(record7);
+		collector.buyRecord(record8);
 		assert.strictEqual(collector.collection.length, 4);
 	});
 
@@ -35,13 +39,17 @@ describe("Collector", function(){
 		assert.strictEqual(collector.cash, 50);
 	});
 
-// doesn't work yet
-	xit("should have cash that decreases with buying", function(){
+	it("should have cash that decreases with buying", function(){
+		collector.cash = 50;
 		collector.buyRecord(record5);
 		assert.strictEqual(collector.cash, 43);
 	});
 
 	it("should be able to sell records", function(){
+		collector.buyRecord(record5);
+		collector.buyRecord(record6);
+		collector.buyRecord(record7);
+		collector.buyRecord(record8);
 		collector.sellRecord(record6);
 		assert.strictEqual(collector.collection.length, 3);
 	});
@@ -56,20 +64,32 @@ describe("Collector", function(){
 		collector.cash = 5;
 		collector.buyRecord(record8);
     // check the length doesn't increase if insufficient funds
-		assert.strictEqual(collector.collection.length, 3);
+		assert.strictEqual(collector.collection.length, 4);
 	});
 
 	it("should be able to view total value", function(){
+		collector.buyRecord(record5);
+		collector.buyRecord(record6);
+		collector.buyRecord(record7);
+		collector.buyRecord(record8);
 		var totalValue = collector.getTotalValue();
 		assert.strictEqual(totalValue, 33);
 	});
 
 	it("should be able to view the value of all records of a given genre", function(){
+		collector.buyRecord(record5);
+		collector.buyRecord(record6);
+		collector.buyRecord(record7);
+		collector.buyRecord(record8);
 		var genreValue = collector.getTotalValue("classical");
 		assert.strictEqual(genreValue, 17);
 	});
 
 	it("should be able to view most valuable record", function(){
+		collector.buyRecord(record5);
+		collector.buyRecord(record6);
+		collector.buyRecord(record7);
+		collector.buyRecord(record8);
 		var mostValuable = collector.findMostValuableRecord();
 		assert.deepStrictEqual(mostValuable, record6);
 	});

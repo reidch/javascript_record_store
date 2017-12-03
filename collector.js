@@ -8,8 +8,12 @@ var Collector = function(name, cash){
 
 Collector.prototype = {
 	buyRecord: function(record){
-		this.collection.push(record);
-	},
+		// if(this.cash >= record.price){
+		this.collection.push(record)
+		this.cash -= record.price;
+	// }
+	// return "Insufficient funds"
+},
 
 	// buy: function(record){
   //   if(this.cash > record.price){
@@ -19,18 +23,9 @@ Collector.prototype = {
   //   return "You can't afford this!"
   // },
   sellRecord: function(record){
-    this.cash += record.price
-    return _.remove(this.collection, record)
+    this.cash += record.price;
+    return _.remove(this.collection, record);
   },
-
-	// sellRecord: function(price){
-	// 	this.cash += price;
-	// },
-  //
-	// buyRecord: function(record){
-	// 	var cash = _.subtract(this.cash, "price")
-	// 	return cash;
-	// },
 
 	getTotalValue: function(genre){
 		if(genre){
