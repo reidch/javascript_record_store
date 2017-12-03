@@ -17,9 +17,9 @@ Store.prototype = {
     return _.remove(this.inventory, record);
   },
 
-	getFinancialSituation: function(){
-		var capital = _.sumBy(this.inventory, "price");
-		return capital += this.balance;
+	getFinancialOverview: function(){
+		var stock = _.sumBy(this.inventory, "price");
+		return "The balance is £" + this.balance + " and the inventory is valued at £" + stock;
 	},
 
 	findRecordsByGenre: function(genre){

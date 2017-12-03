@@ -64,8 +64,8 @@ describe("Store", function(){
 		assert.strictEqual(store.balance, 1008);
 	});
 
-	it("should be able to report financial situation", function(){
-		assert.deepStrictEqual(store.getFinancialSituation(), 1084);
+	it("should be able to give overview of financial situation", function(){
+		assert.deepStrictEqual(store.getFinancialOverview(), "The balance is £1000 and the inventory is valued at £84");
 	});
 
 	it("should be able to view all records of a given genre", function(){
