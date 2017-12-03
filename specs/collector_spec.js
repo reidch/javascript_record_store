@@ -73,16 +73,11 @@ describe("Collector", function(){
 		assert.deepStrictEqual(mostValuable, record6);
 	});
 
-// doesn't work yet
-	xit("should be able to sort records by value, ascending order", function(){
-		assert.strictEqual(collector.collection.price, [record7, record8, record6]);
-		// has to access the price of each record in collection
+	it("should be able to sort records by value, ascending order", function(){
+		var orderValue = collector.orderByValue();
+		assert.deepStrictEqual(orderValue, [record5, record7, record8, record6]);
 	});
 
-// doesn't work yet
-	xit("should be able to compare value of collection with another collector", function(){
-		assert.strictEqual(collector.collection.price, [record7, record8, record6]);
-		// has to access the price of each record in collection
-    // need to create another collector
-	});
+// can't get this to work
+	xit("should be able to compare value of collection with another collector");
 });

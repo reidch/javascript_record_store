@@ -32,6 +32,10 @@ Collector.prototype = {
 	findMostValuableRecord: function(){
 		return _.maxBy(this.collection, "price");
 	},
+
+	orderByValue: function(price){
+		return _.orderBy(this.collection, "price");
+	}
 };
 
 module.exports = Collector;
